@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+//src/app/components/points/points.component.ts
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-points',
@@ -7,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PointsComponent implements OnInit {
 
+  @Input() points: number
+
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit() {
   }
 
 }
