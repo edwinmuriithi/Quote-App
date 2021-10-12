@@ -1,3 +1,4 @@
+//src/app/component/linktext/linktext.component.ts
 import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
@@ -9,9 +10,17 @@ export class LinktextComponent implements OnInit {
 
   @Input() titletext: string
   @Input() linktext: string
+  time: Date =  new Date()
+
   constructor() { }
 
   ngOnInit() {
+    try {
+          const link: string = this.linktext.split('//')[1];
+          this.linktext = link.split('/')[0];      
+    } catch (error) {
+          return this.linktext      
+    }
   }
 
 }

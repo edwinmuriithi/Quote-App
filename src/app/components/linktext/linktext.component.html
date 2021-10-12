@@ -1,6 +1,7 @@
+//src/app/component/linktext/linktext.component.html
 <div class="user-block">
-    <a href="javascript:void(0);">{{titletext}}</a>
-    <div>Shared publicly - 7:30 PM today</div>
+    <h3>{{titletext}}</h3>
+    <div>Shared publicly - {{ time | date:'medium' }}</div>
 </div>
 <!-- /.user-block -->
 <p>

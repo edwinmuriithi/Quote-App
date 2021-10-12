@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+//src/app/components/linklist/linklist.component.ts
+import { Component, OnInit, Input } from '@angular/core';
+import { Article } from '../../redux/models/article';
 
 @Component({
   selector: 'app-linklist',
@@ -6,10 +8,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./linklist.component.css']
 })
 export class LinklistComponent implements OnInit {
-
+  @Input() articles : Array<Article>;
+  
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit() {
   }
 
 }

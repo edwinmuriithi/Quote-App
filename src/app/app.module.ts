@@ -12,6 +12,7 @@ import { LinklistComponent } from './components/linklist/linklist.component';
 import { StoreModule } from '@ngrx/store'
 import { reducers } from './redux/reducer/index';
 import { PointComponent } from './components/point/point.component';
+import { SortPipe } from './redux/sort.pipe';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { PointComponent } from './components/point/point.component';
     PointsComponent,
     AddlinkComponent,
     LinklistComponent,
-    PointComponent
+    PointComponent,
+    SortPipe
   ],
   imports: [
     BrowserModule,
