@@ -11,6 +11,7 @@ import { AddlinkComponent } from './components/addlink/addlink.component';
 import { LinklistComponent } from './components/linklist/linklist.component';
 import { StoreModule } from '@ngrx/store'
 import { reducers } from './redux/reducer/index';
+import { PointComponent } from './components/point/point.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { reducers } from './redux/reducer/index';
     LinktextComponent,
     PointsComponent,
     AddlinkComponent,
-    LinklistComponent
+    LinklistComponent,
+    PointComponent
   ],
   imports: [
     BrowserModule,
