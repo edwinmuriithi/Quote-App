@@ -8,7 +8,8 @@ import { Article } from '../../redux/models/article';
   styleUrls: ['./linklist.component.css']
 })
 export class LinklistComponent implements OnInit {
-  @Input() articles : Array<Article>;
+  @Input()
+  articles: Array<Article> = [];
   
   constructor() { }
 

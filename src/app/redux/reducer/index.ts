@@ -10,8 +10,6 @@ import {
 import * as fromArticle from '../reducer/articles';
 
 import { compose } from "@ngrx/core";
-import { combineLatest } from 'rxjs/observable/combineLatest';
-import { storeLogger } from 'ngrx-store-logger';
 
 export interface State {
     articles:fromArticle.State,

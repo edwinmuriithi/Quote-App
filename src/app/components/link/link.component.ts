@@ -13,7 +13,8 @@ import { Store } from '@ngrx/store'
 export class LinkComponent implements OnInit {
 
   id : number = 0
-  @Input() article: Article
+  @Input()
+  article!: Article;
 
   constructor(private store: Store<fromArticle.State>) { }
 

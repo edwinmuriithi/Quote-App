@@ -11,7 +11,7 @@ import { AddlinkComponent } from './components/addlink/addlink.component';
 import { LinklistComponent } from './components/linklist/linklist.component';
 import { StoreModule } from '@ngrx/store'
 import { reducers } from './redux/reducer/index';
-import { PointComponent } from './components/point/point.component';
+import { PointComponent } from './components/points/points.component';
 import { SortPipe } from './redux/sort.pipe';
 
 @NgModule({

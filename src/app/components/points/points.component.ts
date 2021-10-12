@@ -8,7 +8,8 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class PointsComponent implements OnInit {
 
-  @Input() points: number
+  @Input()
+  points!: number;
 
   constructor() { }
 

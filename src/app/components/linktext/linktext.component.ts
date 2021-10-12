@@ -8,8 +8,10 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class LinktextComponent implements OnInit {
 
-  @Input() titletext: string
-  @Input() linktext: string
+  @Input()
+  titletext!: string;
+  @Input()
+  linktext!: string;
   time: Date =  new Date()
 
   constructor() { }

@@ -8,7 +8,8 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 })
 export class VotelinkComponent implements OnInit {
 
-  @Input() points: number
+  @Input()
+  points!: number;
   @Output() upvote = new EventEmitter()
   @Output() downvote = new EventEmitter()
 
