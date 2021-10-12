@@ -1,4 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+//src/spp/components/link/link.component.ts
+import { Component, OnInit, Input } from '@angular/core';
+import * as fromArticle from '../../redux/reducer'
+import * as fromAction from '../../redux/actions/articles'
+import { Article } from '../../redux/models/article';
+import { Store } from '@ngrx/store'
 
 @Component({
   selector: 'app-link',
@@ -7,9 +12,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LinkComponent implements OnInit {
 
-  constructor() { }
+  id : number = 0
+  @Input() article: Article
 
-  ngOnInit(): void {
+  constructor(private store: Store<fromArticle.State>) { }
+
+  ngOnInit() {
+  }
+
+  upvote = () => {
+    this.store.dispatch(new fromAction.IncrementArticlePointAction(this.article))
+  }
+
+  downvote = () => {
+    this.store.dispatch(new fromAction.DecrementArticlePointAction(this.article))
   }
 
 }

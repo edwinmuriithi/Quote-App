@@ -1,1 +1,8 @@
-<p>link works!</p>
+//src/spp/components/link/link.component.html
+<!-- Post -->
+<div class="post">
+    <app-linktext [titletext]='article.title' [linktext]='article.link'> </app-linktext>
+    <app-votelink [points]='article.points' (upvote)='upvote($event)' (downvote)='downvote($event)'></app-votelink>
+    <hr />
+</div>
+<!-- /.post -->
