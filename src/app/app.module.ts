@@ -2,7 +2,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-//import { AppComponent } from './app.component';
+import { AppComponent } from './app.component';
 import { VotelinkComponent } from './components/votelink/votelink.component';
 import { LinkComponent } from './components/link/link.component';
 import { LinktextComponent } from './components/linktext/linktext.component';
@@ -11,25 +11,6 @@ import { AddlinkComponent } from './components/addlink/addlink.component';
 import { LinklistComponent } from './components/linklist/linklist.component';
 import { StoreModule } from '@ngrx/store'
 import { reducers } from './redux/reducer/index';
-//src/app/app.component.ts
-import { Component } from '@angular/core';
-import { Store } from '@ngrx/store'
-import * as fromArticle from './redux/reducer'
-@Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
-})
-export class AppComponent {
-  title = 'app';
-
-  constructor(private store: Store<fromArticle.State>){
-    this.store.select(fromArticle.getArticles).subscribe(v => {
-      console.log(v)
-    })
-  }
-}
-
 
 @NgModule({
   declarations: [
